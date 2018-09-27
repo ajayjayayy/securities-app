@@ -1,8 +1,265 @@
+.main-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: white;
+  border-bottom: 1px solid #343a40;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0; }
+
+.main-header__logo--display {
+  display: none; }
+
+.main-nav {
+  padding: 20px;
+  padding-top: 30px; }
+
+.main-nav__items {
+  display: flex;
+  justify-content: space-around; }
+
+.main-nav__item a {
+  color: #343a40; }
+
+.main-nav__item a:hover {
+  color: red; }
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 15px auto; }
+
+.form-input__text {
+  text-align: center;
+  color: #343a40; }
+
+.form-input__btn {
+  background-color: #343a40;
+  color: white;
+  border-radius: 0.25rem; }
+
+.form-input__btn:hover {
+  background-color: white;
+  color: #343a40;
+  cursor: pointer; }
+
+.form-input__text,
+.form-input__btn {
+  border: 1px solid #343a40;
+  outline: none;
+  border-radius: 0.25rem;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+  padding: 8px 0; }
+
+@media (min-width: 500px) {
+  .form-input {
+    display: grid;
+    grid-template-columns: 2fr 1fr; }
+  .form-input__text,
+  .form-input__btn {
+    margin: 5px; } }
+
+.form-select {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 90px; }
+
+.form-daily__container-option,
+.form-monthly__container-option {
+  padding: 5px; }
+
+.form-select label:hover {
+  cursor: pointer;
+  background-color: rgba(221, 164, 167, 0.3); }
+
+.form-monthly__container-option label {
+  border-right: 1px solid black; }
+
+.form-monthly__container-option label,
+.form-daily__container-option label {
+  display: block;
+  border: 1px solid black;
+  border-radius: 0.25rem;
+  width: 100%;
+  text-align: center;
+  padding: 10px; }
+
+.form-select [type=radio] {
+  display: none; }
+
+.form-select [type=radio]:checked ~ label {
+  background-color: #dda4a7;
+  color: white; }
+
+.stocks-table {
+  border-collapse: collapse;
+  text-align: center;
+  border-right: 0;
+  border-bottom: 0; }
+
+.stocks-table thead {
+  display: block;
+  border: 1px solid #495057;
+  border-left: 0;
+  border-right: 0; }
+
+.stocks-table th {
+  min-width: 100px;
+  color: #495057;
+  padding: 3px; }
+
+.stocks-table tbody {
+  display: block; }
+
+.stocks-table tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.stocks-table td {
+  min-width: 100px;
+  border-bottom: 1px solid #e9ecef;
+  padding: 5px; }
+
+@media (max-width: 700px) {
+  .stocks-table__col--hide {
+    display: none; } }
+
+.loading-icon {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100px; }
+
+.loading-icon__box {
+  height: 40px;
+  width: 40px;
+  margin: 2px;
+  background: rgba(0, 0, 0, 0.7);
+  filter: blur(1px);
+  animation: load 1s linear infinite; }
+  .loading-icon__box:nth-of-type(2) {
+    animation-delay: -0.25s; }
+  .loading-icon__box:nth-of-type(3) {
+    animation-delay: -0.5s; }
+  .loading-icon__box:nth-of-type(4) {
+    animation-delay: -0.75s; }
+
+@keyframes load {
+  0% {
+    opacity: 0; }
+  30% {
+    opacity: 0; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.dropped-stock {
+  display: flex;
+  justify-content: space-between;
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  border-radius: 4px;
+  padding: 8px 15px;
+  margin-bottom: 18px;
+  width: 90%; }
+
+.dropped-stock__message--toggler {
+  opacity: 0.5; }
+
+.dropped-stock__message--toggler:hover {
+  color: black;
+  cursor: pointer; }
+
+.too-many-calls {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 15px;
+  margin-bottom: 18px;
+  color: #c09853;
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  border-radius: 4px;
+  width: 90%; }
+
+.too-many-calls__message--toggler {
+  opacity: 0.5; }
+
+.too-many-calls__message--toggler:hover {
+  color: black;
+  cursor: pointer; }
+
+
+
+
+
+.form-active {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 20px;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 0.25rem; }
+
+.form-active label {
+  padding: 10px;
+  border-radius: 0.25rem; }
+
+.form-active label:hover {
+  cursor: pointer;
+  background-color: rgba(34, 178, 199, 0.3); }
+
+.form-active [type=radio] {
+  display: none; }
+
+.form-active [type=radio]:checked ~ label {
+  background-color: #22b2c7;
+  color: white; }
+
+.main-footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin-top: 20px;
+  padding: 20px 0;
+  background-color: #a2ad66;
+  width: 100%; }
+
+.section-forms {
+  margin-top: 70px; }
+
+.section-data {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center; }
+
+.section-data__active-data {
+  margin: 0 auto; }
+
+/* Border box declaration
+https://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+  font-size: 1em; }
+
+/* inherit border-box on all elements in the universe and before and after */
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
 body {
   margin: 0; }
   body h1, body h2, body h3, body h4, body h5, body h6 {
-    margin: 0; }
-  body p {
     margin: 0; }
   body ul {
     margin: 0;
@@ -11,52 +268,4 @@ body {
     text-transform: uppercase; }
   body a {
     text-decoration: none; }
-
-.main-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 2rem;
-  align-items: center; }
-
-.main-header__title {
-  justify-self: left; }
-
-.main-header__navigation {
-  justify-self: end; }
-
-
-
-.table-container, tbody {
-  height: 700px;
-  overflow: scroll; }
-
-thead th {
-  border: 1px solid black; }
-
-tbody td {
-  padding: 10px;
-  text-align: center;
-  border: 1px solid black; }
-
-
-.home-container {
-  margin: 2rem; }
-
-.home-container__input-selection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
-  padding: 1rem; }
-
-.home-data-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
-
-.selections-container {
-  padding: 1rem; }
-
-.charts h2 {
-  text-align: center; }
-
 
